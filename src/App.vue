@@ -9,12 +9,13 @@
 
 <script>
 import Navigation from './components/nav';
+import ShowCase from './components/showcase';
 
-console.log(Navigation);
 export default {
   name: 'app',
   components: {
-    Navigation
+    Navigation,
+    ShowCase
   }
 }
 </script>

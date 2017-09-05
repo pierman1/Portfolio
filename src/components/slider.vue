@@ -1,46 +1,57 @@
 <template lang="html">
-  <div class="slider__container">
-    <ul id="slides">
-    <li class="slide showing">Slide 1</li>
-    <li class="slide">Slide 2</li>
-    <li class="slide">Slide 3</li>
-    <li class="slide">Slide 4</li>
-    <li class="slide">Slide 5</li>
-</ul>
-  </div>
+  <slider class="slider" animation="fade" :control-btn="false" :interval="8000" :indicators="'right'" :speed="100" height="350px">
+  <slider-item v-for="(i, index) in list" :key="index" >
+    <div :style="i">
+      <p>{{i.content}}</p>
+    </div>
+  </slider-item>
+</slider>
 </template>
 
 <script>
+
+import { Slider, SliderItem } from 'vue-easy-slider'
+
 export default {
+  data () {
+    return {
+      list: [
+        { content: 'Recognizing the need is the primary condition for design.', backgroundColor: '', width: '100%', height: '100%' },
+        { content: 'Good design is obvious. Great design is transparent.', backgroundColor: '', width: '100%', height: '100%' },
+        { content: 'Styles come and go. Good design is a language, not a style.', backgroundColor: '', width: '100%', height: '100%' },
+      ],
+    }
+  },
+  components: {
+    Slider,
+    SliderItem
+  }
 }
+
 </script>
 
 <style lang="css">
-  #slides {
-    position: relative;
-    height: 300px;
-    padding: 0px;
-    margin: 0px;
-    list-style-type: none;
+  .slider {
+    max-width: 800px;
+    width: 90%;
+    margin: 2rem auto 2rem auto;
+
+  }
+  .slider p {
+    font-size: 4rem;
+    font-weight: 800;
+    padding-top: 1rem;
+    line-height: 1.2;
+  }
+  .slider span.slider-indicator-icon {
+    border-radius: 0px !important;
   }
 
-  .slide {
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    z-index: 1;
-
-    -webkit-transition: opacity 1s;
-    -moz-transition: opacity 1s;
-    -o-transition: opacity 1s;
-    transition: opacity 1s;
+  .slider span.slider-indicator-icon-active {
+    background-color: #FF9800 !important;
   }
 
-  .showing {
-    opacity: 1;
-    z-index: 2;
+  .slider .indi-right {
+    right: 0;
   }
 </style>

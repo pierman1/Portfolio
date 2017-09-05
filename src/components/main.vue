@@ -1,26 +1,30 @@
 <template lang="html">
   <div class="main">
-    <h1>{{title}}</h1>
+    <!-- <h1>{{title}}</h1>
 
     <ul class="info">
       <li v-text="me.info.firstName"></li>
       <li v-text="me.info.lastName"></li>
       <li v-text="me.info.email"></li>
-    </ul>
+    </ul> -->
 
-    <ul>
+    <!-- <ul>
       <li v-for="link in me.links">
         <a :href="link.link">{{link.name}}</a>
       </li>
-    </ul>
+    </ul> -->
 
-    <projects></projects>
+    <!-- <projects></projects> -->
+    <slider></slider>
+    <showcase></showcase>
 
   </div>
 </template>
 
 <script>
 import Projects from './projects';
+import Slider from './slider';
+import Showcase from './showcase';
 
 export default {
   data() {
@@ -40,7 +44,9 @@ export default {
     }
   },
   components: {
-    Projects
+    Projects,
+    Slider,
+    Showcase
   }
 }
 </script>
