@@ -51,7 +51,8 @@ export default {
       var i = 1;
       function myLoop () {
 
-         setTimeout(function () {i]);
+         setTimeout(function () {
+            console.log(slides[0][i]);
 
             slides[0][i - 1].classList.toggle('active');
 
