@@ -2,7 +2,11 @@
   <div class="nav">
     <nav>
       <ul>
-        <li v-for="item in navItems">{{item.title}}</li>
+        <li v-for="item in navItems">
+          <router-link :to="{ path: item.path }">
+            {{item.title}}
+          </router-link>
+        </li>
       </ul>
     </nav>
   </div>
@@ -14,14 +18,15 @@ export default {
   data() {
     return {
       navItems: [
-        {title: 'Home'},
-        {title: 'About'},
-        {title: 'Contact'}
+        {title: 'Home', path: '/'},
+        {title: 'About', path: 'about'},
+        {title: 'Contact', path: 'contact'}
       ]
     }
   }
 }
 </script>
 
-<style lang="css">
+<style lang="css" scoped>
+
 </style>
