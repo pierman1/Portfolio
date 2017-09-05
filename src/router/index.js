@@ -5,6 +5,7 @@ import About from '@/components/about'
 import Contact from '@/components/contact'
 import Project from '@/components/project-single'
 import News from '@/components/news'
+import Article from '@/components/news-single'
 
 Vue.use(Router)
 
@@ -34,6 +35,11 @@ export default new Router({
       path: '/news',
       name: 'News',
       component: News
+    },
+    {
+      path: '/news/:article',
+      name: 'Article',
+      component: Article
     }
   ]
 })
