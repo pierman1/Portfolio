@@ -2,7 +2,7 @@
   <div class="main">
     <h1>{{title}}</h1>
 
-    <ul>
+    <ul class="info">
       <li v-text="me.info.firstName"></li>
       <li v-text="me.info.lastName"></li>
       <li v-text="me.info.email"></li>
@@ -45,8 +45,14 @@ export default {
 }
 </script>
 
-<style lang="css">
-  body {
-    background-color: #E2E2E2;
+<style lang="css" scoped>
+  .main {
+    max-width: 800px;
+    width: 90%;
+    margin: 0 auto;
+    padding: 2em 1em 2em 1.2em;
+  }
+  .info {
+    margin-top: 2rem;
   }
 </style>
