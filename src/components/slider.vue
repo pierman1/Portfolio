@@ -1,6 +1,6 @@
 <template lang="html">
   <slider class="slider" animation="fade" :control-btn="false" :interval="8000" :indicators="'right'" :speed="100" height="350px">
-  <slider-item v-for="(i, index) in list" :key="index" >
+  <slider-item class="slide" v-for="(i, index) in list" :key="index" >
     <div :style="i">
       <p>{{i.content}}</p>
     </div>
@@ -21,6 +21,9 @@ export default {
         { content: 'Styles come and go. Good design is a language, not a style.', backgroundColor: '', width: '100%', height: '100%' },
       ],
     }
+  },
+  created: function() {
+
   },
   components: {
     Slider,
