@@ -28,5 +28,8 @@ export default {
 </script>
 
 <style lang="css" scoped>
-
+  ul {
+    display: flex;
+    justify-content: space-between;
+  }
 </style>

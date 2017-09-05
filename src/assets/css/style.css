@@ -41,3 +41,19 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
+/*------------*/
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.container {
+  width: 90%;
+  max-width: 800;
+  margin: 1rem auto 1rem auto;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Roboto Condensed', sans-serif;
+}
