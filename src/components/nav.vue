@@ -22,6 +22,7 @@ export default {
       navItems: [
         {title: 'Home', path: '/'},
         {title: 'About', path: 'about'},
+        {title: 'News', path: 'news'},
         {title: 'Contact', path: 'contact'}
       ]
     }
