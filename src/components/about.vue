@@ -23,7 +23,7 @@ export default {
 }
 </script>
 
-<style lang="css">
+<style lang="css" scoped>
 
 .about__container {
   width: 90%;
@@ -32,7 +32,10 @@ export default {
 }
 
 .about__container h1 {
-  font-size: 2rem;
+  font-size: 4rem;
+  font-weight: 800;
+  padding-top: 4rem;
+  line-height: 1.2;
 }
 
 .about__container p {

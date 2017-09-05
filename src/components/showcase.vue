@@ -44,26 +44,26 @@ export default {
   methods: {
     mouseOver: function() {
       console.log('hover');
-      const slider = document.querySelector('.showcase__container__list');
-      const slides = [slider.children];
-      console.log(slides);
-
-      var i = 1;
-      function myLoop () {
-
-         setTimeout(function () {
-            console.log(slides[0][i]);
-
-            slides[0][i - 1].classList.toggle('active');
-
-            i++;
-            if (i < 4) {
-               myLoop();
-            }
-         }, 3000)
-      }
-
-      myLoop();                      //  start the loop
+      // const slider = document.querySelector('.showcase__container__list');
+      // const slides = [slider.children];
+      // console.log(slides);
+      //
+      // var i = 1;
+      // function myLoop () {
+      //
+      //    setTimeout(function () {
+      //       console.log(slides[0][i]);
+      //
+      //       slides[0][i - 1].classList.toggle('active');
+      //
+      //       i++;
+      //       if (i < 4) {
+      //          myLoop();
+      //       }
+      //    }, 3000)
+      // }
+      //
+      // myLoop();                      //  start the loop
     }
   }
 }
@@ -113,7 +113,7 @@ export default {
   }
 
   a:hover {
-    opacity: 1;
+    opacity: .8;
   }
 
   .showcase__container .active > a {
